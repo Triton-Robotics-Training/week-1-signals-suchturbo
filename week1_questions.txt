@@ -1,6 +1,15 @@
 Question 1: Explain the difference between analog and digital signals.
 
+Analog signals can take on any value within a range, like 0  to 3.3 V, and change smoothly  like a wave, and digital signals are not continuous and have a finite set of values and use HIGH(1) or LOW(1).
+
+
 Question 2: Give an example of something that uses digital signals and how it uses it.
 
+A keyboard uses digital signals; for example, when you click a key, it sends HIGH(1), and when it is not pressed, it sends LOW(0).
+
+
 Question 3: Give an example of something that uses analog signals and how it uses it.
+
+A microphone uses analog signals when there is a louder sound there is a higher voltage but when there is a lower sound it is a lower voltage. Because sound is usually continous the voltage changes smoothly over time. 
+
 
