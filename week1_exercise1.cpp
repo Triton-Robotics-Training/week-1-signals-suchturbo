@@ -4,11 +4,17 @@
 //IF YOU HAVE ISSUES WITH THE SIMULATOR, CONTACT EMBEDDED LEAD
 #include "mbed.h"
 
+#include "mbed.h"
+
+DigitalOut led(LED1);
+DigitalIn btn(BUTTON1);
+
 int main() {
     while (1) {
-        printf("Week 1 Exercise 1");
-
-        // MAKE SURE THERE IS ALWAYS A WAIT ON THE SIM OR IT WILL CRASH
-        wait_ms(500); 
+        
+        led = btn.read();
+        printf("Blink! LED is now %d\n", led.read());
+        
+        wait_ms(500);
     }
 }
