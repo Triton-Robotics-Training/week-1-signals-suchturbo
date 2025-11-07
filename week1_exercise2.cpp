@@ -1,14 +1,31 @@
-//STARTER 
-//THIS EXERCISE IS TO BE DONE IN THE ARM MBED SIMULATOR
-//http://195.130.59.221/
-//IF YOU HAVE ISSUES WITH THE SIMULATOR, CONTACT EMBEDDED LEAD
 #include "mbed.h"
+
+//DigitalOut led(LED1);
+//DigitalIn btn(BUTTON1);
+
+AnalogIn pot(A0);
+DigitalOut led(LED1);
+
 
 int main() {
     while (1) {
-        printf("Week 1 Exercise 2");
+        
+        float value = pot.read();
+        
+        int ontime = value*2000;
+        
+        int offtime =  2000 - ontime;
+        
+        printf("Pot value: %.2f | ON: %d ms | OFF: %d ms\n", value, ontime, offtime);
 
-        // MAKE SURE THERE IS ALWAYS A WAIT ON THE SIM OR IT WILL CRASH
-        wait_ms(500); 
+        
+        led =1 ;
+         
+        wait_ms(ontime);
+            
+        led = 0;
+        wait_ms(offtime);
+        
+        
     }
 }
